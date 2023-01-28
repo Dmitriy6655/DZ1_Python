@@ -9,13 +9,22 @@
 
 
 print("Введите 6-ти значный номер билета: ")
-a = int(input())
+a = input()
+h = 6
+
+if len(a) > h or len(a) < h:
+    print("Введено некорректное число!")
+    exit(0)
+else:
+    a = int(a)
+
 sumTail = int()
 sumHead = int()
 num1 = int()
 num2 = int()
 f=int()
-v=a%1000
+v=a//1000
+
 
 while f<3:
     num1= a % 10
@@ -27,8 +36,8 @@ while f<3:
 
     f+=1
 
-print(f'Сумма 3х последних цифр равна: {sumTail}')
-print(f'Сумма 3х первых цифр равна: {sumHead}')
+# print(f'Сумма 3х последних цифр равна: {sumTail}')
+# print(f'Сумма 3х первых цифр равна: {sumHead}')
 
 if sumTail == sumHead:
     print('Yes')
