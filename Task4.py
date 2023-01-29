@@ -4,3 +4,14 @@
 # 3 2 4 -> yes
 # 3 2 1 -> no
 
+print("Введите размер шоколадки n x m")
+print("Введите размер n ")
+n = int(input())
+print("Введите размер m ")
+m = int(input())
+print("Введите количество долек которые хотите отломить: ")
+k = int(input())
+if k < (m * n) and (k % n) == 0 or (k % m) == 0:
+    print("Yes")
+else:
+    print("No")
